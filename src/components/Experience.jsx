@@ -7,39 +7,16 @@ const Experience = () => {
   const defaultExperiences = [
     {
       id: '1',
-      company: 'Tech Solutions Inc.',
-      position: 'Senior Full Stack Developer',
-      duration: '2022 - Present',
-      description: 'Leading development of scalable web applications using React, Node.js, and AWS. Mentoring junior developers and implementing best practices for code quality and performance.',
-      technologies: ['React', 'Node.js', 'AWS', 'MongoDB', 'Docker']
-    },
-    {
-      id: '2',
-      company: 'Digital Innovations Ltd.',
-      position: 'Full Stack Developer',
-      duration: '2020 - 2022',
-      description: 'Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to create responsive and user-friendly interfaces.',
-      technologies: ['React', 'Express', 'PostgreSQL', 'Material-UI', 'Git']
-    },
-    {
-      id: '3',
-      company: 'StartupXYZ',
-      position: 'Frontend Developer',
-      duration: '2019 - 2020',
-      description: 'Built interactive user interfaces for a fast-growing startup. Implemented responsive designs and optimized application performance for better user experience.',
-      technologies: ['JavaScript', 'React', 'CSS3', 'REST APIs', 'Webpack']
+      company: 'Wish Developers & Designers.',
+      position: 'Full Stack intern',
+      duration: 'Jan 2022 - Mar 2022',
+      description: 'Leading development of scalable web applications using React and Node.js. implementing best practices for code quality and performance.',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'MongoDB', 'Git', 'Github']
     }
   ];
 
   useEffect(() => {
-    const savedExperiences = localStorage.getItem('portfolio-experiences');
-    if (savedExperiences) {
-      const parsedExperiences = JSON.parse(savedExperiences);
-      setExperiences(parsedExperiences.length > 0 ? parsedExperiences : defaultExperiences);
-    } else {
-      setExperiences(defaultExperiences);
-      localStorage.setItem('portfolio-experiences', JSON.stringify(defaultExperiences));
-    }
+    setExperiences(defaultExperiences);
   }, []);
 
   return (
@@ -58,13 +35,13 @@ const Experience = () => {
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 hidden md:block"></div>
-            
+
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={exp.id} className="relative">
                   {/* Timeline dot */}
                   <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block"></div>
-                  
+
                   <div className="md:ml-16 bg-card border border-border rounded-lg p-6 card-hover">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
@@ -73,9 +50,9 @@ const Experience = () => {
                       </div>
                       <span className="text-sm text-muted-foreground mt-2 md:mt-0">{exp.duration}</span>
                     </div>
-                    
+
                     <p className="text-muted-foreground mb-4">{exp.description}</p>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech) => (
                         <span

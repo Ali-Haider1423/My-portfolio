@@ -1,8 +1,7 @@
 const About = () => {
   const skills = [
-    'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express',
-    'MongoDB', 'PostgreSQL', 'Python', 'Django', 'AWS',
-    'Docker', 'Git', 'REST APIs', 'GraphQL', 'Material-UI'
+    'JavaScript', 'React', 'Node.js', 'Express',
+    'MongoDB', 'PostgreSQL', 'Git', 'REST APIs', 'Material-UI'
   ];
 
   return (
@@ -38,10 +37,6 @@ const About = () => {
                 always staying updated with the latest trends in web development. 
                 I enjoy solving complex problems and creating user-friendly applications 
                 that make a real impact.
-              </p>
-              <p>
-                When I'm not coding, I love learning new technologies, contributing to 
-                open-source projects, and sharing knowledge with the developer community.
               </p>
             </div>
           </div>
