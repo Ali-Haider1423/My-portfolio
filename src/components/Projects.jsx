@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
+import OSproject from '../assets/OSproject.png';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -10,7 +11,7 @@ const Projects = () => {
       id: '1',
       title: 'Operating Systems simulation',
       description: 'Built an OS simulation in React with process, memory, and I/O management, implementing scheduling algorithms like FCFS, RR, SJF, and Priority.',
-      image: '../../public/images/OSproject.png',
+      image: OSproject,
       link: 'https://os-project-three.vercel.app/',
       technologies: ['React','OS algorithms']
     }
