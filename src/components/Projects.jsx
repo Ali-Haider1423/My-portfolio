@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import OSproject from '../assets/OSproject.png';
+import ReactTodo from '../assets/React_todo.png';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -13,14 +14,22 @@ const Projects = () => {
       description: 'Built an OS simulation in React with process, memory, and I/O management, implementing scheduling algorithms like FCFS, RR, SJF, and Priority.',
       image: OSproject,
       link: 'https://os-project-three.vercel.app/',
-      technologies: ['React','OS algorithms']
+      technologies: ['React', 'OS algorithms']
+    },
+    {
+      id: '2',
+      title: 'Todo App',
+      description: 'Built a responsive To-Do List application using React with features for task creation, completion, and deletion. Implemented state management and a clean UI to enhance usability and performance.',
+      image: ReactTodo,
+      link: 'https://react-todo-list-two-eta.vercel.app/',
+      technologies: ['React']
     }
   ];
 
   useEffect(() => {
-      setProjects(defaultProjects);
-      localStorage.setItem('portfolio-projects', JSON.stringify(defaultProjects));
-   
+    setProjects(defaultProjects);
+    localStorage.setItem('portfolio-projects', JSON.stringify(defaultProjects));
+
   }, []);
 
   return (
